@@ -1,0 +1,5 @@
+module libzbar [system] {
+  header "/usr/include/zbar.h"
+  link "zbar"
+  export *
+}
