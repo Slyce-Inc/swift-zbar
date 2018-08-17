@@ -1,4 +1,4 @@
-module libzbar [system] {
+module Clibzbar [system] {
   header "/usr/include/zbar.h"
   link "zbar"
   export *

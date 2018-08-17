@@ -1,5 +1,5 @@
 import Foundation
-import libzbar
+import Clibzbar
 
 
 public class Symbol {

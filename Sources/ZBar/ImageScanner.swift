@@ -1,4 +1,4 @@
-import libzbar
+import Clibzbar
 
 
 public class ImageScanner {

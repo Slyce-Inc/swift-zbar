@@ -3,11 +3,11 @@
 import PackageDescription
 
 let package = Package(
-    name: "libZBar",
+    name: "ZBar",
     products: [ .library(name: "ZBar", targets: ["ZBar"]) ],
     dependencies: [],
     targets: [
-        .target(name: "libzbar", dependencies: []),
-        .target(name: "ZBar", dependencies: ["libzbar"]),
+        .target(name: "Clibzbar", dependencies: []),
+        .target(name: "ZBar", dependencies: ["Clibzbar"]),
     ]
 )
