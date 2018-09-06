@@ -12,11 +12,8 @@ public class ImageScanner {
     zbar_image_scanner_destroy(wrapper)
   }
 
-  public func scan(image: Image) -> SymbolGenerator? {
-    let n = zbar_scan_image(wrapper, image.wrapper)
-    guard n > 0 else {
-      return nil
-    }
+  public func scan(image: Image) -> SymbolGenerator {
+    let _ = zbar_scan_image(wrapper, image.wrapper)
     return SymbolGenerator(image: image)
   }
 
@@ -35,11 +32,11 @@ public struct SymbolGenerator: Sequence, IteratorProtocol {
   }
 
   public mutating func next() -> Symbol? {
-    defer {
-      cursor = zbar_symbol_next(cursor)
-    }
     guard cursor != nil else {
       return nil
+    }
+    defer {
+      cursor = zbar_symbol_next(cursor)
     }
     return Symbol(cursor!)
   }

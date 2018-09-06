@@ -19,7 +19,7 @@ public class Image {
   }
 
   public var symbols: SymbolGenerator {
-    return SymbolGenerator(image: self)
+    return SymbolGenerator(image:self)
   }
 
   public enum Format : UInt {
