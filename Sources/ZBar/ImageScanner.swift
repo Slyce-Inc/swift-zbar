@@ -6,6 +6,7 @@ public class ImageScanner {
 
   public init() {
     wrapper = zbar_image_scanner_create()
+    zbar_image_scanner_set_config(wrapper, zbar_symbol_type_t(0), ZBAR_CFG_ENABLE, 0)
   }
 
   deinit {
