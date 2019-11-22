@@ -1,5 +1,5 @@
 module Clibzbar [system] {
-  header "/usr/include/zbar.h"
+  header "shim.h"
   link "zbar"
   export *
 }
